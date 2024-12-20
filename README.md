@@ -1,1 +1,1 @@
-# Heat_wave_Predicyion
+# Heat_wave_Prediction
