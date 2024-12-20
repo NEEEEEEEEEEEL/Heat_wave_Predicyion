@@ -1,0 +1,120 @@
+heat index- "Heat index" is what the temperature feels like to the human body, taking into account the impact of relative 
+	     humidity and air temperature.
+
+Definition: The heat index measures what the temperature feels like to the human body based on air temperature and relative
+	    humidity.
+Inputs: 
+Air temperature
+Relative humidity
+
+utci-
+Definition: UTCI is a more comprehensive index that evaluates the thermal stress on the human body due to the outdoor 
+	    environment. It predicts how the human body would respond physiologically.
+Inputs:
+Air temperature
+Relative humidity
+Wind speed
+Solar radiation (direct and diffuse)
+
+The resulting MRT, a crucial parameter in assessing human response to radiant effects are then integrated with other atmospheric 
+data to compute UTCI using the Fiala model, following established operational procedures (Bröde et al., 2012; Fiala et al., 2012)
+
+mrt-
+Definition: MRT refers to the average temperature of all surrounding surfaces (like walls, windows, floors, and the sun)
+	    that emit radiation toward a person. It influences how the body absorbs heat through radiation, which can make
+	    a significant impact on perceived temperature.
+example-
+For instance, on a sunny
+April day, MRT can be higher than the air temperature due to the additional heat from the
+sun, thus, the environment is warmer. This is a factor that came out very well because when it
+comes to real applications like designing cities or worrying about epidemics, that measure
+gives a complete picture. Urban planners can also use data from MRTs to inform them how to
+reduce heat stress; whether commonly used building materials should be reflective; whether
+trees should be planted; or how buildings should be designed to reduce the heat gain. Thus,
+using the data obtained through MRT, public health officials can alert the public to heat and
+institute measures to prevent heat and other heat-related illnesses.
+
+points-
+The Met department declares a "heatwave" when local temperature crosses 40 degrees and is simultaneously more than 4-5 degrees 
+above the region's normal temparature.
+
+Bangladesh in the east showed the highest mean UTCI range (26–32 °C), while Afghanistan had the lowest. In the west, along the 
+India-Pakistan border, the daily maximum UTCI range was the highest (38–46 °C). The research also indicated increasing mean 
+and maximum UTCI levels, with a 0.25 to 0.75 °C per decade rise in Pakistan, Afghanistan, and northwest India, particularly
+during June to September.
+
+
+high resolution data-
+High-resolution data in deep learning refers to data that has a large amount of detail, typically in terms of higher pixel counts 
+in images, finer granularity in temporal or spatial data, or greater precision in measurements. For example:
+
+High-resolution images: In the context of image processing, high-resolution data means images with more pixels, which results in more 
+detailed visual information. These images allow deep learning models to detect finer features, but also require more computational resources 
+for processing.
+
+High-resolution temporal data: This refers to data collected at shorter time intervals, offering finer granularity. For instance, in time-series
+analysis, high-resolution data might involve minute-by-minute or second-by-second measurements instead of daily or hourly.
+
+High-resolution spatial data: This involves data collected over a smaller spatial area, or at a higher frequency, allowing for more detailed insights,
+such as geographical information systems (GIS) data at higher levels of detail.
+
+ERA-5 HEAT-
+fine resolutions (for instance 0. 25° × 0. 25°):
+0.25° × 0.25°: This is the resolution of the data in terms of latitude and longitude. It means that the data is divided into grid cells where each cell represents an area that is 0.25 degrees in both the latitude and longitude directions.
+
+Fine resolutions: This indicates that the data is measured with high detail or granularity, allowing for more precise analysis.
+
+Data preprocessing-
+Resampling: Regarding temporal data resolutions, climate data could be on an hourly, daily,
+or even monthly basis depending on the observation made. For a more consistent method of
+data analysis, the resampling techniques can resample the data to a standard time scale. For
+
+example:
+Upsampling: Pros: It could also be useful to convert daily data to hourly, in which case, one
+has to interpolate the values.
+
+Downsampling: Averaging or summing data on an hourly basis to present data on an
+assessment of a day.
+
+eg: Averaging or Summarizing: Integrating and aggregating information derived from multiple
+    geographical grid cells into a single unified larger cell or group of distinct cells.
+
+Feature Engineering: This is more effective because if one has to expand the features of the
+climate to be analyzed, one can create new features that better capture the variation of this
+climatic data.
+
+Derived Variables: Developing new parameters, heat, cooling, or other relevant indices and
+aesthetical parameters, aggregated from several climatic characteristics.
+
+Heat Index (HI): They include; the Steadman equation which helps in estimating the HI
+when taken in conjunction with the prevalence points of temperature and relative humidity
+standard when used in establishing the Apparent temperature of a place.
+
+TASKS:
+find the correct/precise co-ordinates of west bengal
+look for labels from IMD dataset
+convert the heatmaps into array(with pixel intensity)
+gain more domain knowledge
+model building knowledge
+figure out the aggregation
+
+researh paper links-
+1. https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/gdj3.102
+insights-
+There are four variables required for the computation of the UTCI: 2 m air temperature, 2 m dew point temperature 
+(or relative humidity), wind speed at 10 m above ground level and mean radiant temperature (MRT).
+
+The UTCI is valid at all spatial and temporal scales from the micro to the macro and suitable for a variety of applications-
+It has been extensively used, for instance, to define the thermal environment and its variability under current and future climates
+
+It has been applied to investigate the negative impacts of heat and cold exposure on human comfort and health, also within vulnerable groups 
+
+It has also been implemented as a forecasting tool for weather conditions associated to thermal stress, such as heatwaves (***)
+
+Further applications include tourism industry, outdoor recreational activities and occupational health
+
+MRT and UTCI data are stored in Kelvin (K). They can be converted into degree Celsius (°C) by subtracting 273.15.
+
+Highest MRT and UTCI values are found in almost all the Northern Hemisphere and the tropical regions.
+MRT values are generally higher in desert areas, where the low cloudiness and high albedo increase the 
+portion of the solar radiation incident on the ground and reflected by it.
